@@ -4,6 +4,9 @@
 # Version 0.0.0.0.0.0.1
 # DonPollo 2023 - All rights reserved
 
+# V A R I A B L E S : S T R I N G S
+
+# *********************************************************
 
 # Funcion Print
 # inprime en pantalla
@@ -173,5 +176,7 @@ ejem_sec_esc4 = "\\DonPollo\\ es el mejor"
 print(ejem_sec_esc4)
 
 # \n Nueva Línea:
-ejem_sec_esc4 = "DonPollo \nes el\ mejor"
+ejem_sec_esc5 = "DonPollo \nes el \nmejor"
 print(ejem_sec_esc5)
+
+# *********************************************************
