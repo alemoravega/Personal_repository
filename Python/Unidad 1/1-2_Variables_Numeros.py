@@ -1,4 +1,4 @@
-# *********************************************************
+# ********************************************************************************************
 
 """ Resumen Puthon Aspectos básicos"""
 # Version 0.0.0.0.0.0.1
@@ -6,10 +6,11 @@
 
 # V A R I A B L E S :   N Ú M E R O S
 
-# **************************************************************
+# ********************************************************************************************
 
 # Pueden ser de varios tipos:
 
+import math
 numero = 2               # Entero -> integer - int
 decimal = 1.2            # Decimal -> float
 imaginario = 2 + 2j      # Número imaginario, no existe.
@@ -20,7 +21,7 @@ print(numero)
 print(decimal)
 print(imaginario)
 
-# ***************************************************************
+# ********************************************************************************************
 
 # Operaciones:
 
@@ -43,7 +44,7 @@ print(3 % 8)
 # Número elevado a, donde 6 es la base y 2 es el exponente:
 print(6 ** 2)
 
-# ***************************************************************
+# ********************************************************************************************
 
 # Reemplazar variables por sí mismas:
 
@@ -57,9 +58,7 @@ numero2 = 10
 numero2 += 2
 print(numero2)
 # se pueden hacer con todos los operadores.
-
-# ***************************************************************
-
+# ********************************************************************************************
 # Funciones integradas:
 
 # Round redondea al número más cercano:
@@ -87,3 +86,33 @@ print(round(numero3, 3))
 
 numero4 = -5
 print(abs(numero4))
+
+# ********************************************************************************************
+
+# M Ó D U L O S  :  M A T H
+
+# ********************************************************************************************
+
+# Los módulos son archivos escritos que se pueden traer y vienen escritos en Python para
+# no tener que escribirlos de nuevo.
+
+
+# Math es un archivo que contiene código escrito.
+
+# Ceil es un método que lleva un número al entero más cercano hacia arriba:
+print(math.ceil(1.276554467))
+# Floor es un método que lleva un número al entero más cercano hacia abajo:
+print(math.floor(1.256564576))
+# Isnan es un método que retorna false si el valor que se le está entregando es un número.
+print(math.isnan(34))
+# pow es iun metodo que permite elevar un numero a la potencia requerida:
+# (El primer número es la base y el segundo es el exponente)
+print(math.pow(10, 4))
+# sqrt: retorna la raíz cuadrada de un número.
+print(math.sqrt(9))
+
+
+# La documentación completa se encuentra en:
+# https://docs.python.org/3/library/math.html
+
+# ********************************************************************************************
