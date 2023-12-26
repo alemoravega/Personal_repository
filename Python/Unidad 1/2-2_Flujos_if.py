@@ -152,3 +152,47 @@ for numero in range(1, 5):
     print(numero * "¡Hola! ")
     print(numero * "¿Cómo estás? ")
     print(numero * "¡Responde mierda!")
+
+# También se puede iterar Strings:
+for char in "DonPollo":
+    print(char)
+
+# ********************************************************************************************
+
+# For else:
+
+# En este ejemplo, se utiliza para buscar un dato númérico.
+
+# buscar = int(input("Ingresa un número: "))
+buscar = 9
+for numero1 in range(10):
+    # Se usa para ver todo lo que recorre el loop o cuántas veces se ejecuta.
+    print(numero1)
+    if numero1 == buscar:
+        print("Encontré el número", 9)  # Se puede cambiar por "buscar"
+        break  # BREAK: termina el programa una vez se cumple la condición.
+else:  # Se utiliza como "for else", en casos que no se encuentra el valor.
+    print("No se encontró el número buscado")
+
+# ********************************************************************************************
+
+# While:
+
+# El bucle se ejecuta mientras se cumpla la condición.
+
+numero = 1
+while numero < 10:
+    print(numero)
+    numero *= 2
+
+# Ejemplo para salir de una aplicación:
+comando = ""
+while comando.lower() != "salir":
+    comando = input("$. ")
+    print(comando)
+
+# Loop infinitos, se da cuando no se tiene una condición de salida.
+
+# ********************************************************************************************
+
+# Loops anidados:
