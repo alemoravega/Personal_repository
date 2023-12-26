@@ -13,7 +13,7 @@
 # Condicional if: si se cumple la condición, se ejecuta x que esté anidado, si no se cumple,
 # se ejecuta lo demás. El orden de las instrucciones es importante.
 
-edad = int(input("¿Cuántos años tienes? "))
+edad = 16
 if edad > 18:
     print("Eres mayor de edad.")
 elif edad == 18:
@@ -24,8 +24,85 @@ else:
 # If Ternario
 
 # Otra forma de escribir los if y else:
-edad1 = int(input("Ingresa tu edad: "))
-mensaje1 = "es mayor de 17" if edad1 > 17 else "es menor"
+edad1 = 16
+mensaje1 = "es mayor de 17" if edad1 > 17 else "es menor de 17"
 print(mensaje1)
 
 # ********************************************************************************************
+
+# Operadores Lógicos: and, or, not:
+
+# AND: Cuando se tiene 2 condiciones y ambos son true, la operación completa es True. Si una
+# es falsa, la operación completa es Falsa. OR: cuando una de las condiciones es True, la
+# operación completa es True. Si ambas son verdaderas, la operación es falsa. NOT: niega el
+# resultado de la operación.
+
+
+# Ejemplo AND:
+gas = True
+encendido = True
+if gas and encendido:
+    print("Puedes avanzar!")
+
+gas = True
+encendido = False
+if gas and encendido:
+    print("Puedes avanzar!")
+else:
+    print("No puedes avanzar!")
+
+# Ejemplo OR:
+
+gas = True
+encendido = False
+if gas or encendido:
+    print("Puedes avanzar!")
+else:
+    print("No puedes avanzar!")
+
+gas = False
+encendido = False
+if gas or encendido:
+    print("Puedes avanzar!")
+else:
+    print("No puedes avanzar!")
+
+# Ejemplo NOT - OR:
+
+gas = False
+encendido = False
+if not gas or encendido:
+    print("Puedes avanzar!")
+else:
+    print("No puedes avanzar!")
+
+# Ejemplo IF, AND:
+
+gas = True
+encendido = True
+edad2 = 18
+
+if gas and encendido and edad2 > 17:
+    print("Puedes manejar")
+
+# Ejemplo IF, AND, OR:
+
+gas = True
+encendido = True
+edad2 = 16
+
+if gas and encendido or edad2 > 17:
+    print("Puedes manejar también")
+
+# Ejemplo IF, AND, OR y NOT:
+
+gas = False
+encendido = True
+edad3 = 16
+
+if not gas and encendido or edad3 > 17:
+    print("Puedes manejar también jeje")
+
+# ********************************************************************************************
+
+# Operaciones de corto circuito.
