@@ -1,6 +1,6 @@
 # ********************************************************************************************
 
-""" Resumen Puthon Aspectos básicos"""
+print(""" Resumen Puthon Aspectos básicos""")
 # Version 0.0.0.0.0.0.1
 # DonPollo 2023 - All rights reserved
 
@@ -106,3 +106,49 @@ if not gas and encendido or edad3 > 17:
 # ********************************************************************************************
 
 # Operaciones de corto circuito.
+
+# And: necesita que todas las evaluaciones sean True. Si la primera es False, la siguiente
+# no se evaluará. Las evaluaciones se ejecutan de izquierda a derecha, a menos que exista
+# un paréntesis.
+
+# OR: si la primera evaluación es True, no se evaluarán las siguientes.
+
+# ********************************************************************************************
+
+# Cadena de Comparadores:
+
+edad5 = 25
+
+if 15 <= edad <= 65:
+    print("Puedes entrar: ")
+
+# ********************************************************************************************
+
+# Loop for:
+
+# Se utiliza para iterar una lista de elementos.
+# RANGE: crea una lista de números y la devuelve. En este caso, range(5) es una lista que
+# empieza en 0 al 4.
+# La variable "número" va a tomar el valor de cada variable que se encuentre en la lista.
+# Por lo tanto, el bucle se ejecutará por cada elemento.
+
+for numero in range(5):
+    print(numero)
+
+# El primer argumento de range(x,y), "x" es el número en el cual se inicia la lista, y el "y",
+# es el número de elementos que contendrá la lista numérica.
+
+for numero in range(1, 5):
+    print(numero)
+
+# También se puede combinar con Strings: (solo acepta la *)
+
+for numero in range(1, 5):
+    print(numero * "¡Hola!")
+
+# Si hay mas "print", se ejecutarán una a una de arriba a abajo, y luego pasará al sgte número:
+for numero in range(1, 5):
+    print("Las palabras se repetirán", numero, "veces.")
+    print(numero * "¡Hola! ")
+    print(numero * "¿Cómo estás? ")
+    print(numero * "¡Responde mierda!")
