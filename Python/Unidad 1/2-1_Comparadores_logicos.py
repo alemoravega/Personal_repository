@@ -8,5 +8,15 @@
 
 # ********************************************************************************************
 
-
-print()
+# Son: <, >, =, <=, >=, !=.
+# Devuelven True o False dependiendo si se cumple o no la condición:
+print(2 > 1)     # True
+print(2 < 1)     # False
+print(2 >= 1)    # True
+print(2 <= 1)    # False
+print(2 >= 2)    # True
+print(3 <= 2)    # False
+print(2 == 2)    # True
+print(2 == 4)    # False
+print(2 == "2")  # Dos tipos de datos distintos da False.
+print(2 != 3)    # True
