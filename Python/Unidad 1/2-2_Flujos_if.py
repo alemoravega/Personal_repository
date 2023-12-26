@@ -186,7 +186,7 @@ while numero < 10:
     numero *= 2
 
 # Ejemplo para salir de una aplicación:
-comando = ""
+comando = "salir"
 while comando.lower() != "salir":
     comando = input("$. ")
     print(comando)
@@ -195,4 +195,16 @@ while comando.lower() != "salir":
 
 # ********************************************************************************************
 
-# Loops anidados:
+# Loops anidados: son loops dentro de un loop.
+
+for j in range(3):       # Outer loop
+    for k in range(3):   # inner loop
+        print(f"{j}, {k}")
+
+for j in range(2):
+    for k in range(2):
+        for l in range(2):
+            for m in range(2):
+                print(f"{j}, {k}, {l}, {m}")
+
+# ********************************************************************************************
