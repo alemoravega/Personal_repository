@@ -39,7 +39,7 @@ funcion2("mas brigido!")
 
 def funcion2(adjetivo1, adjetivo2):
     print("DonPollo")
-    print(f"Es el más {adjetivo1}, y también el mas {adjetivo2}")
+    print(f"Es el más {adjetivo1}, y también el más {adjetivo2}")
 
 
 funcion2("pulentamente", "rico")
@@ -49,7 +49,11 @@ funcion2("pulentamente", "rico")
 
 def funcion3(adjetivo3, adjetivo4="parámetro por defecto"):
     print("DonPollo")
-    print(f"Es el más {adjetivo3}, y también el mas {adjetivo4}")
+    print(f"Es el más {adjetivo3}, y también el más {adjetivo4}")
 
 
-funcion3("longi", )
+# Aquí hay un solo argumento:
+funcion3("longi",)
+
+# Aquí hay dos argumentos:
+funcion3("tulón", "pichulero")
