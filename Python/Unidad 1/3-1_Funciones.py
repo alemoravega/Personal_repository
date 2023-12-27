@@ -28,11 +28,13 @@ def funcion2(adjetivo):
 
 funcion2("peor")  # Llamar a la función con el argumento dado.
 funcion2("mas brigido!")
+
 # Cuando se hace referencia a una variable dentro de una función, se dice que se hace uso
 # de sus parámetros. En la función2, el parametro es "adjetivo". Por el contrario, cuando se
-# llama a la función, el valor se denomina argumento, por ejemplo: "peor".
+# llama a la función, el valor se denomina argumento, en este caso por ejemplo el argumento
+# es: "peor".
 
-# Función con mas de un parámetro:
+# Función con más de un parámetro:
 
 
 def funcion2(adjetivo1, adjetivo2):
@@ -41,3 +43,13 @@ def funcion2(adjetivo1, adjetivo2):
 
 
 funcion2("pulentamente", "rico")
+
+# si no hay algún argumento, da error por lo que puede establecer un argumento por defecto:
+
+
+def funcion3(adjetivo3, adjetivo4="parámetro por defecto"):
+    print("DonPollo")
+    print(f"Es el más {adjetivo3}, y también el mas {adjetivo4}")
+
+
+funcion3("longi", )
