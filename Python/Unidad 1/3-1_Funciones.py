@@ -108,10 +108,12 @@ get_product1(id="0001-1", name="PC", desc="PC entero pulento")
 
 # Función return:
 
+
 def suma_1(a, b):
     """función que ejemplifica return"""
     resultado = a + b
-    return resultado # Retorna la variable 'resultado', que es a + b. 
+    return resultado  # Retorna la variable 'resultado', que es a + b.
+
 
 # Se llama a la función:
 C = suma_1(1, 2)
