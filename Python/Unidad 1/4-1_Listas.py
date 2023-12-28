@@ -69,11 +69,44 @@ print("""Para ello se utiliza la siguiente sintaxis:
 rango = list(range(10))
 print(rango)
 print(" ")
-print("Segundo ejemplo de range: ")
 print("""Para una lista con un rango de números determinado,
-    se requiere la siguiente sintaxis:
+se requiere la siguiente sintaxis:
+
     rango = list(range(5, 11))
-    """)
+""")
 rango1 = list(range(5, 11))
 print(rango1)
 print(" ")
+# Lista desde una cadena de caracteres:
+print("""Para una lista con elementos de un strings,
+se requiere la siguiente sintaxis:
+
+    rango = list("Don Pollo")
+""")
+rango2 = list("Don Pollo")
+print(rango2)
+print(" ")
+
+
+# Manipulando las listas:
+
+regalones = ["Don Rex", "Don Brownie",
+             "Doña Dora", "Doña Carmela", "Doña Lucinda"]
+# Para acceder a un elemento de las listas, se debe indicar el índice del elemento requerido:
+print("Lista Regalones:", regalones)
+# Donde uno es el segúndo elemento, porque parte de 0.
+print("El segundo elemento de la lista \"Regalones\" es:", regalones[1])
+
+# Para cambiar elementos del listado:
+regalones[0] = "Laika"
+print("""
+Se cambia el elemento "Don Rex" por "Laika": 
+""", regalones)
+
+# Para obtener una parte determina de la lista:
+# El primer número es de donde emnpieza y el segundo es donde termina.
+print(regalones[1:3])
+# Si se omite el primer elemento, empieza desde 0:
+print(regalones[:3])
+# Si se omite el último elemento, imprime hasta el final de la lista:
+print(regalones[1:])
