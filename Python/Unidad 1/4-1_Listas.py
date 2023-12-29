@@ -168,3 +168,16 @@ if "Doña Carmela" in regalon1:
 print(regalon1.count("Doña Carmela"))
 
 # Agregando y eliminando elementos de una lista.
+
+regalon2 = ["Don Rex",  # 0
+            "Don Brownie",  # 1
+            "Doña Laika",  # 2
+            "Doña Dora",  # 3
+            "Doña Pitufa",  # 4
+            "Doña Lucinda",  # 5
+            "Doña Carmela"  # 6
+            "Don Pitufo",  # 7
+            "Don Tobi",  # 8
+            "Doña Emma"]  # 9
+
+# Para agregar datos, método insert()
