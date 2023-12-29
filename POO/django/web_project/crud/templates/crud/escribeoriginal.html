@@ -1,0 +1,8 @@
+<form id="contact_form" action="/crud/escribe" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <input id="nombre" class="input" name="nombre" type="text" value="" size="30" /><br />
+  <input id="apellido" class="input" name="apellido" type="text" value="" size="30" /><br />
+  <input id="rut" class="input" name="rut" type="text" value="" size="30" /><br />
+
+  <input id="submit_button" type="submit" value="Guardar" />
+</form>

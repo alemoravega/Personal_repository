@@ -1,0 +1,94 @@
+__init__.py
+asgi.py
+settings.py
+urls.py
+wsgi.py
+
+******************************************************
+C:\Users\alumnosnunoa>mkdir django
+
+C:\Users\alumnosnunoa>cd django
+
+C:\Users\alumnosnunoa\django>py -3 -m venv .venv
+"py" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+
+C:\Users\alumnosnunoa\django>python -m venv .venv
+
+C:\Users\alumnosnunoa\django>dir
+ El volumen de la unidad C es Windows
+ El número de serie del volumen es: E82D-01E6
+
+ Directorio de C:\Users\alumnosnunoa\django
+
+02-12-2022  10:22    <DIR>          .
+02-12-2022  10:22    <DIR>          ..
+02-12-2022  10:22    <DIR>          .venv
+               0 archivos              0 bytes
+               3 dirs  797.473.271.808 bytes libres
+
+C:\Users\alumnosnunoa\django>cd .venv
+
+C:\Users\alumnosnunoa\django\.venv>dir
+ El volumen de la unidad C es Windows
+ El número de serie del volumen es: E82D-01E6
+
+ Directorio de C:\Users\alumnosnunoa\django\.venv
+
+02-12-2022  10:22    <DIR>          .
+02-12-2022  10:22    <DIR>          ..
+02-12-2022  10:22    <DIR>          Include
+02-12-2022  10:22    <DIR>          Lib
+02-12-2022  10:22               173 pyvenv.cfg
+02-12-2022  10:23    <DIR>          Scripts
+               1 archivos            173 bytes
+               5 dirs  797.473.075.200 bytes libres
+
+C:\Users\alumnosnunoa\django\.venv>cd ..
+
+C:\Users\alumnosnunoa\django>dir
+ El volumen de la unidad C es Windows
+ El número de serie del volumen es: E82D-01E6
+
+ Directorio de C:\Users\alumnosnunoa\django
+
+02-12-2022  10:22    <DIR>          .
+02-12-2022  10:22    <DIR>          ..
+02-12-2022  10:22    <DIR>          .venv
+               0 archivos              0 bytes
+               3 dirs  797.472.960.512 bytes libres
+
+C:\Users\alumnosnunoa\django>.venv\scripts\activate
+
+(.venv) C:\Users\alumnosnunoa\django>python -m pip install django
+
+******************************************************************
+
+Un CRUD en Django es una forma de implementar las cuatro operaciones básicas que se pueden realizar sobre una base de datos: crear, leer, actualizar y eliminar registros. Django facilita el desarrollo de aplicaciones web que requieren estas operaciones, ya que ofrece herramientas y componentes que simplifican el proceso. Algunos de estos componentes son:
+
+- Los **modelos**, que definen la estructura y el comportamiento de los datos que se almacenan en la base de datos. Los modelos se crean usando el lenguaje Python y el ORM (Object-Relational Mapper) de Django, que permite interactuar con la base de datos usando objetos de Python en lugar de consultas SQL.
+- Las **vistas**, que son funciones o clases que reciben una petición del usuario y devuelven una respuesta. Las vistas se encargan de la lógica de la aplicación, es decir, de procesar los datos del modelo, de interactuar con otros servicios, de aplicar filtros, de validar formularios, etc. Las vistas también pueden usar plantillas para renderizar el contenido de la respuesta de forma dinámica y personalizada.
+- Las **URLs**, que son las direcciones que identifican a cada vista y que permiten al usuario acceder a las distintas funcionalidades de la aplicación. Las URLs se definen en el archivo urls.py de la aplicación, que asocia cada patrón de URL con la vista correspondiente.
+- Los **formularios**, que son clases que permiten crear y validar campos de entrada de datos. Los formularios se pueden crear de forma manual o basándose en un modelo. Los formularios facilitan la creación y actualización de registros en la base de datos, así como la validación de los datos introducidos por el usuario.
+- Las **vistas genéricas**, que son clases predefinidas que implementan las operaciones CRUD de forma estándar y que se pueden personalizar según las necesidades de la aplicación. Las vistas genéricas ahorran tiempo y código al desarrollador, ya que evitan tener que escribir las vistas desde cero.
+
+Para crear un CRUD en Django, se deben seguir algunos pasos básicos:
+
+- Crear los modelos que representen los datos que se quieren almacenar en la base de datos.
+- Crear las vistas que manejen las operaciones CRUD sobre los modelos, usando las vistas genéricas o creando las propias.
+- Crear las URLs que asocien cada vista con un patrón de dirección.
+- Crear los formularios que permitan al usuario introducir y validar los datos de los modelos.
+- Crear las plantillas que muestren el formulario y los datos al usuario.
+
+Puedes encontrar más información y ejemplos sobre cómo crear un CRUD en Django en los siguientes enlaces:
+
+- [Qué es CRUD, cómo funciona y dónde se aplica](^1^)
+- [CRUD genérico en Django](^2^)
+- [Como crear un CRUD con Django 2 y Bootstrap 4 - Parte 1 (Python 3.7)](^3^)
+- [Como crear un CRUD con Django 3.1 (Python 3.9) y Bootstrap 4.6 – Parte 3](^4^)
+
+Origen: Conversación con Bing, 01-12-2023
+(1) Qué es CRUD, cómo funciona y dónde se aplica - Blog de HubSpot. https://blog.hubspot.es/website/que-es-crud.
+(2) CRUD genérico en Django - App&Web. https://www.appandweb.es/blog/crud-generico-django/.
+(3) Como crear un CRUD con Django 2 y Bootstrap 4 - Parte 1 (Python 3.7). https://blog.nubecolectiva.com/como-crear-un-crud-con-django-2-y-bootstrap-4-parte-1-python-3-7/.
+(4) Como crear un CRUD con Django 3.1 (Python 3.9) y Bootstrap 4.6 – Parte 3. https://blog.nubecolectiva.com/como-crear-un-crud-con-django-3-1-python-3-9-y-bootstrap-4-6-parte-3/.

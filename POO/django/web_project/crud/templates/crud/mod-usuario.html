@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="DonPollo - 2023">
+    <title>Signin Template · Bootstrap v5.2</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta name="theme-color" content="#712cf9">
+</head>
+
+<body>
+    <div class="text-center">
+        <main style="align-items: center;" class="form-signin w-100 m-auto">
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <form method="post" id="contact_form" action="/crud/mod-usuario" class="text-md-center">
+                    <img class="mb-4" src="https://i.vimeocdn.com/portrait/10232914_640x640" alt="" width="72"
+                        height="57">
+                    <h1 class="h3 mb-3 fw-normal">Modifica tus contraseña: </h1>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="usuario" name="usuario"
+                            placeholder="Nombre completo">
+                        <label for="floatingInput">Nombre usuario</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" name="password" class="form-control" id="password"
+                            placeholder="Password">
+                        <label for="floatingPassword">Contraseña</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="text" name="nueva_password" class="form-control" id="nueva_password"
+                            placeholder="Password">
+                        <label for="floatingPassword">Nueva Contraseña</label>
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Recordarme
+                        </label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Enviar datos</button>
+                    <p class="mt-5 mb-3 text-muted">&copy; 2017–2023</p>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
