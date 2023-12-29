@@ -175,9 +175,45 @@ regalon2 = ["Don Rex",  # 0
             "Doña Dora",  # 3
             "Doña Pitufa",  # 4
             "Doña Lucinda",  # 5
-            "Doña Carmela"  # 6
+            "Doña Carmela",  # 6
             "Don Pitufo",  # 7
             "Don Tobi",  # 8
             "Doña Emma"]  # 9
 
-# Para agregar datos, método insert()
+# Para agregar datos, método insert():
+
+# el 1 significa el lugar en dónde se quiere insertar el elemento.
+regalon2.insert(1, "Doña Kumi")
+
+# Para agregar elementos al final del listado, método append():
+regalon2.append("Doña Cuchi")
+
+# Para eliminar elementos dentro de un listado, método remove():
+regalon2.remove("Doña Kumi")  # Sólo borra el primero.
+# Método pop(), borra el último elemento:
+regalon2.pop()
+# Si se requiere borrar un elemento con un indice en particular:
+regalon2.pop(0)  # Se borra "Don Rex"
+# otra forma de eliminar elementos, del .
+del regalon2[0]  # Se borra "Don Brownie"
+# Para borrar todo, método clear():
+regalon2.clear()
+print(regalon2)
+
+
+# Cómo ordenar elementos de una lista.
+
+numeros1 = [1, 56, 2, 56, 34, 87, 12, 73, 9, 99, 57, 35, 63, 37]
+print(numeros1)
+# Método sort(), para ordenar listas de menor a mayor:
+numeros1.sort()
+print(numeros1)
+# Para ordenar la lista de mayor a menor:
+numeros1.sort(reverse=True)
+print(numeros1)
+
+
+# Función sorted:
+# Esto es una nueva lista ordenada de menor a mayor.
+numeros2 = sorted(numeros1)
+print(numeros2)
