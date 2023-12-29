@@ -110,3 +110,42 @@ print(regalones[1:3])
 print(regalones[:3])
 # Si se omite el último elemento, imprime hasta el final de la lista:
 print(regalones[1:])
+# Si se utiliza un número en el indice que es negativo, se cuenta desde la derecha.
+print(regalones[-1])
+# Para seleccionar elementos variados en la lista:
+numeros = list(range(21))
+# Range permite seleccionar el inicio de la lista:
+# numeros = list(range(5, 21)) --> Empieza desde el número 5.
+# Números pares:
+print(numeros[::2])
+# Números impares:
+print(numeros[::3])
+# Números multiplos de 4 y etc:
+print(numeros[::4])
+# Números multiplos de 5 desde el número 10:
+print(numeros[10::5])
+
+
+# Desempaquetando listas:
+
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# de esta forma se puede asignar nombre a los elementos de la lista:
+# *otros: Para empaquetar en una lista distinta:
+primero, segundo, tercero, *otros = numeros
+print(primero)  # 1
+print(segundo)  # 2
+print(tercero)  # 3
+print(primero, tercero)
+primero, segundo, *otros, penultimo, ultimo = numeros
+# imprime el elemento primero y los elementos restantes.
+print(primero, otros)
+# imprime el elemento primero, el ultimo y el resto.
+print(primero, otros, ultimo)
+print(segundo, ultimo)
+
+
+# Iterando listas:
+# Iterable: que se puede repetir (Método iter), pudiendo tomar índices consecutivos empezando desde 0.
+
+regalon1 = ["Don Rex", "Don Brownie", "Doña Laika",
+            "Doña Dora", "Doña Carmela", "Doña Lucinda"]
