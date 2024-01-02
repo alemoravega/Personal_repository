@@ -217,3 +217,71 @@ print(numeros1)
 # Esto es una nueva lista ordenada de menor a mayor.
 numeros2 = sorted(numeros1)
 print(numeros2)
+
+# Orden de listas que contienen listas.
+# Con Id a la izquierda:
+usuarios = [[5, "Don Pollo"], [1, "Doom Pollo"], [3, "Pollito"], [6, "Pollo"]]
+usuarios.sort()  # ordena el listado de menor a mayor
+print(usuarios)
+
+# Con Id a la derecha:
+usuarios = [["Don Pollo", 5], ["Doom Pollo", 1], ["Pollito", 4], ["Pollo", 6]]
+usuarios.sort()
+print()
+# no ordena, porque debe tener algo ordenable a la izquierda.
+# Se le debe pasar una función:
+
+
+def ordena(elemento):
+    """Funcion que ordena"""
+    # por si mismo no ordena, se le deben pasar parámetros.
+    return elemento[1]
+
+
+# De esta forma, se ordena de menor a mayor con un índice en la derecha.
+usuarios.sort(key=ordena)
+# Para que sea de mayor a menor, se debe pasar otro argumento; reverse = True
+usuarios.sort(key=ordena, reverse=True)
+print(usuarios)
+
+# Función lambda: Es una función anónima para extraer el segundo elemento
+# Hace lo mismo que la anterior pero con una escritura mas sencilla:
+
+usuarios.sort(key=lambda el: el[1], reverse=True)
+# Lambda: se utiliza como una función anónima para extraer el segundo elemento
+# Reverse: indica que la lista se debe ordenar en orden descendente
+print(usuarios)
+
+
+# Listas de compresión:
+
+# Se usa lista "usuarios2":
+
+usuarios2 = [["Don Pollo", 5], ["Doom Pollo", 1], ["Pollito", 4], ["Pollo", 6]]
+# Obtener solo el nombre, no el identificador.
+# Cómo ya se vió antes, se podría a través del método "for - in".
+
+# nombres = []
+# for regalo in usuarios2:
+#    nombres.append(regalo[0])
+# print(nombres)
+
+# Aqui se recorre cada "usuario" (elemento de la lista) en la lista "usuarios2", y toma el
+# primer elemento (indice 0) de cada "usuario", creando una nueva lista llamada #nombres".
+# La expresion es la siguiente:
+
+# nombre_lista_nueva = [primer_elemento[0] for elementos in nombre_lista_original]
+nombres = [usuario[0] for usuario in usuarios2]
+print(nombres)
+
+# Cada elemento se transforma, en este caso accediendo al primer elemento.
+
+# filtar:
+# En este ejemplo se filtraron elementos mayores a 2. 
+nombres = [usuario[0] for usuario in usuarios2 if usuario[1] > 2]
+print(nombres)
+
+
+
+# Crear listas a partir de listas existentes: 
+
