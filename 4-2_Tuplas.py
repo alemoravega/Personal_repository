@@ -31,7 +31,7 @@ punto2 = tuple([1, 2, 3])
 # y "pop()"" [eliminar el elemento final de la lista] no pueden ser ejecutadas en tuplas.
 
 # numeros1[0] = 5
-# marca error
+# marca error, porque no se pueden modificar.
 
 # Desempaquetamiento de Tuplas:
 primero, segundo, *otros = numeros1
@@ -39,3 +39,10 @@ primero, segundo, *otros = numeros1
 # iteración de tuplas:
 # for n in numeros1:
 # print(n)
+
+# Finalmente, para modificar una tupla, se debe convertir a una lista con la función "list()":
+
+# la tupla "numeros1" se convierte a una lista denominada "listanumeros":
+listanumeros = list(numeros1)
+# Luego, se edita la lista:
+listanumeros[0] = 0
