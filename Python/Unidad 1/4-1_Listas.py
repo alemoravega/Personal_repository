@@ -261,27 +261,29 @@ usuarios2 = [["Don Pollo", 5], ["Doom Pollo", 1], ["Pollito", 4], ["Pollo", 6]]
 # Obtener solo el nombre, no el identificador.
 # Cómo ya se vió antes, se podría a través del método "for - in".
 
-# nombres = []
-# for regalo in usuarios2:
-#    nombres.append(regalo[0])
-# print(nombres)
+nombres = []
+for regalo in usuarios2:
+    nombres.append(regalo[0])
 
 # Aqui se recorre cada "usuario" (elemento de la lista) en la lista "usuarios2", y toma el
 # primer elemento (indice 0) de cada "usuario", creando una nueva lista llamada #nombres".
 # La expresion es la siguiente:
-
 # nombre_lista_nueva = [primer_elemento[0] for elementos in nombre_lista_original]
-nombres = [usuario[0] for usuario in usuarios2]
-print(nombres)
-
+nombres = [usuario[0] for usuario in usuarios2]  # Nombre: map
 # Cada elemento se transforma, en este caso accediendo al primer elemento.
 
-# filtar:
-# En este ejemplo se filtraron elementos mayores a 2. 
+# filtar - filter:
+# En este ejemplo se filtraron elementos mayores a 2.
+nombres = [usuario[0] for usuario in usuarios2 if usuario[1] > 2]
+
+# map - filter
+# Crear listas a partir de listas existentes, filtrar y transformar:
 nombres = [usuario[0] for usuario in usuarios2 if usuario[1] > 2]
 print(nombres)
 
+# Función de Filter:
 
+otros_usuarios = list(filter(lambda usuario: usuario[1] > 2, usuarios2))
+print(otros_usuarios)
 
-# Crear listas a partir de listas existentes: 
-
+# se puede usar map y filter en lugar de la compresión de listas, tienen el mismo resultado.
