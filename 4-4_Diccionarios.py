@@ -33,6 +33,25 @@ print(punto_a)
 
 # método get():
 print(punto_a.get("m"))
-
+print(punto_a.get("x"))
 # Si encuentra la llave, retorna el valor.
 # Si no encuentra la llave, retorna NONE.
+# Además, si no se encuentra la llave, es posible pasarle un segundo argumento, para que devuelva la llave:
+print(punto_a.get("m", 100))
+
+# Para eliminar llave y su valor, se utiliza "del":
+del punto_a["x"]
+# Función del():
+del (punto_a["y"])
+
+punto_a["x"] = 25
+punto_a["y"] = 50
+
+# Interación con for, devuelve el nombre de las llaves pero no su valor.
+for valor in punto_a:
+    print(valor)
+# Para ver su valor, método items().
+for valor in punto_a.items():
+    print(valor)
+
+# Ejemplo de uso diccionarios Python.
