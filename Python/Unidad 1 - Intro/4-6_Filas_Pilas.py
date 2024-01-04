@@ -49,3 +49,21 @@ if not fila1:
 # Pilas: Una pila (también conocida como “stack”) es una estructura de datos en Python que permite almacenar y
 # recuperar datos1. La característica principal de una pila es que sigue el principio de LIFO (Last In, First Out),
 # lo que significa que el último elemento que se añade a la pila es el primero en ser eliminado.
+
+# Lista Vacia:
+pila = []
+# Se agregan elementos:
+pila.append(1)
+pila.append(2)
+pila.append(3)
+print(pila)
+# Con el modulo poop() se visualiza el último elemento de la lista:
+ult_pila = pila.pop()
+print(ult_pila)
+
+# Para implementar una "pila", es necesario trabajar solo con los módulos append() y pop().
+
+# Pila Vacía:
+pila_vac = ()
+if not pila_vac:
+    print("pila vacía")
