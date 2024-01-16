@@ -204,3 +204,23 @@ print(animal.hablar())
 # ***************************************************************************************************************
 
 # P R O P I E D A D E S   Y   M É T O D O S   P R I V A D O S:
+
+# Una propiedad privada es una variable que solo puede ser accedida o modificada dentro de la misma clase
+# donde fue declarada. De la misma manera, un método privado es una función que solo puede ser llamada desde
+# otros métodos que pertenecen a la misma clase.
+
+class Wwe:
+    def __init__(self, nombre, frase, finisher):
+        self.nombre = nombre  # Para que sea privada se le pone: "__".
+        self.frase = frase
+        self.finisher = finisher
+
+    def habla(self):
+        print(f"{self.nombre} dice: Yeaaaaah!")
+
+    @classmethod
+    def factory(cls):
+        return cls("The Rock", "If you smell what The Rock is cocking", "Rock Bottom")
+    
+
+# Cam,biar "nombre" a "__nombre", se usa 'Ctrl + Shift + p'
