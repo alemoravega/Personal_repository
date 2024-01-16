@@ -174,12 +174,12 @@ class Animal:
         pass
 
 
-class Perro(Animal):
+class Perro1(Animal):
     def hablar(self):
         return "Guau!"
 
 
-class Gato(Animal):
+class Gato1(Animal):
     def hablar(self):
         return "Miau!"
 
@@ -188,9 +188,9 @@ class AnimalFactory:
     def create_animal(self):
         tipo = input("¿Qué tipo de animal quieres crear? ")
         if tipo.lower() == "perro":
-            return Perro()
+            return Perro1()
         elif tipo.lower() == "gato":
-            return Gato()
+            return Gato1()
         else:
             raise ValueError("Tipo de animal no soportado")
 
