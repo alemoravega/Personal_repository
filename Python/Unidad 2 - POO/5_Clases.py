@@ -122,3 +122,85 @@ print(carmela.patas)
 # ***************************************************************************************************************
 
 # M É T O D O S   D E   C L A S E :
+
+
+class Regalones:
+    """Clase Regalones"""
+    patas = 4  # Este atributo está asociado a la clase "Regalones" y a todas sus instancias.
+
+    def __init__(self, nombre, edad):
+        self.nombre = nombre     # nombre: propiedad de la clase (atributos).
+        self.edad = edad         # edad: propiedad de la clase (atributos).
+
+# Se puede tranformar este método como propio de la clase "Regalones":
+    @classmethod
+    def hablar(cls):
+        """Función de ejemplo"""
+# cls : convencion que se utiliza cuando se está creando métodos de clase para referirse a la clase misma.
+# En este caso, es lo mismo que se escribiera "Regaloones".
+        print("Ellos dicen: Miaaaushh!")
+
+
+Regalones.hablar()
+
+gata1 = Regalones("Lucinda", 1)      # Instancia N°1
+gata2 = Regalones("Carmela", 1.5)    # Instancia N°2
+perro1 = Regalones("Rex", 11)        # Instancia N°3
+
+# Factory Method: Es una interfaz para crear un objeto, pero deja que sean las subclases quienes decidan
+# qué clase instaciar. Ejemplo:
+
+
+class Familia:
+    def __init__(self, nombre, edad, parentesco):
+        self.nombre = nombre
+        self.edad = edad
+        self.parentesco = parentesco
+
+    @classmethod
+    def factory(cls):
+        return cls("DonPollo", 35, "hermano")
+
+
+familiar1 = Familia.factory()
+print(familiar1.edad, familiar1.nombre)
+
+
+# Ejemplo de Factory Method de Bing:
+
+
+class Animal:
+    def hablar(self):
+        pass
+
+
+class Perro(Animal):
+    def hablar(self):
+        return "Guau!"
+
+
+class Gato(Animal):
+    def hablar(self):
+        return "Miau!"
+
+
+class AnimalFactory:
+    def create_animal(self):
+        tipo = input("¿Qué tipo de animal quieres crear? ")
+        if tipo.lower() == "perro":
+            return Perro()
+        elif tipo.lower() == "gato":
+            return Gato()
+        else:
+            raise ValueError("Tipo de animal no soportado")
+
+
+# Uso del Factory Method
+factory = AnimalFactory()
+animal = factory.create_animal()
+print(animal.hablar())
+
+
+# ***************************************************************************************************************
+
+# P R O P I E D A D E S   Y   M É T O D O S   P R I V A D O S:
