@@ -1,15 +1,15 @@
 # ***************************************************************************************************************
 
 # Resumen Python Aspectos básicos
-# Version 0.0.0.0.0.0.1
-# DonPollo 2024 - All rights reserved
+# Version 0.0.0.0.0.0.1 - 1
+# DonPollo 2024 - All rights reserved.
 
 #    P O O  /  C L A S E S
 
 
 # ***************************************************************************************************************
 
-#    I N T R O D U C C I O N :
+#    I N T R O D U C C I Ó N :
 
 # Es una función que permite conocer el tipo de dato en cuestión.
 
@@ -77,10 +77,12 @@ print(isinstance(mi_perro, Perro))
 
 
 class Gata:  # Clase Gata
+    patas = 4
     # self: referencia a la clase, los demás son valores del constructor.
+
     def __init__(self, nombre, edad):
-        self.nombre = nombre     # nombre: propiedad de la clase.
-        self.edad = edad         # edad: propiedad de la clase.
+        self.nombre = nombre     # nombre: propiedad de la clase (atributos).
+        self.edad = edad         # edad: propiedad de la clase (atributos).
 
     # Método. Se accede con "self". Es lo mismo que una función.
     def hablar(self):
@@ -94,4 +96,29 @@ lucinda.hablar()
 
 # ***************************************************************************************************************
 
-# P R O P I E D A D E S    D E   C L A S E :
+# P R O P I E D A D E S    D E   C L A S E   E   I N S T A N C I A S:
+
+# las propiedades de las instanias de las clases se denominan "atributos".
+# Los atributos se pueden modificar como cualquier variable, pero el cambio desde una instancia en particular,
+# funciona para esa misma instancia y no para la clase.
+
+# Desde la clase:
+print(Gata.patas)
+# Desde la instancia "lucinda" y "carmela":
+print(lucinda.patas)
+print(carmela.patas)
+# Despues de definir el valor del atributo de la clase, se puede cambiar el valor de la variable patas.
+Gata.patas = 3
+# Desde la clase:
+print(Gata.patas)
+# Desde la instancia "lucinda":
+print(lucinda.patas)
+# Pero si se cambia desde la instancia en particular, sólo dicha instancia se verá afectada y no de todas las
+# instancias de la clase:
+carmela.patas = 4
+print(lucinda.patas)
+print(carmela.patas)
+
+# ***************************************************************************************************************
+
+# M É T O D O S   D E   C L A S E :
