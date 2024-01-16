@@ -186,6 +186,7 @@ class Gato1(Animal):
 
 # class AnimalFactory:
 
+
     def create_animal(self):
         tipo = input("¿Qué tipo de animal quieres crear? ")
         if tipo.lower() == "perro":
@@ -234,7 +235,7 @@ class Wwe:
 
 personaje1 = Wwe.factory()
 personaje1.habla()
-# Cam,biar "nombre" a "__nombre", se usa 'Ctrl + Shift + p', luego "rename".
+# Cambiar "nombre" a "__nombre", se usa 'Ctrl + Shift + p', luego "rename".
 
 # Con "__" no se puede aceder al valoor del argumento:
 # print(personaje1.__nombre)
@@ -267,7 +268,6 @@ class MiClase:
 
 
 mi_objeto = MiClase()
-mi_objeto._metodo_privado()
 
 # En este código, _metodo_privado es un método privado. Aunque técnicamente puede ser accedido fuera de la clase
 # (como se muestra en el ejemplo), la convención es que solo debe ser utilizado dentro de la clase. Es importante
@@ -277,7 +277,7 @@ mi_objeto._metodo_privado()
 
 # ***************************************************************************************************************
 
-# D E C O R A D O R    P R O P E R T Y :
+# D E C O R A D O R    P R O P E R T I E S :
 
 
 class DonPollo:
@@ -288,3 +288,117 @@ class DonPollo:
 
 
 pollo = DonPollo("Alejandro")
+print(pollo)
+
+# Lo anterior imprime:
+# <__main__.DonPollo object at 0x00000119135A9BE0>
+# __main__: Esto indica que la clase DonPollo está definida en el script principal (o módulo principal) que se está ejecutando.
+# DonPollo: Este es el nombre de la clase del objeto.
+# object at 0x00000119135A9BE0: Esto indica que el objeto está ubicado en la dirección de memoria 0x00000119135A9BE0.
+
+# Para prevenir errores al asignar valores a los argumentos:
+
+# El decorador @property en Python es un decorador incorporado que se utiliza para asignar funcionalidad “especial” a ciertos métodos
+# para que actúen como getters, setters o deleters al momento de definir y usar propiedades en una clase.
+
+# Aquí tienes un ejemplo de cómo se usa:
+
+
+class Clase:
+    def __init__(self, mi_atributo):
+        self.__mi_atributo = mi_atributo
+
+    @property
+    def mi_atributo(self):
+        return self.__mi_atributo
+
+# En este código, mi_atributo es un método que se comporta como una propiedad gracias al decorador @property.
+# Aunque técnicamente puede ser accedido fuera de la clase, la convención es que solo debe ser utilizado
+# dentro de la clase12. Las propiedades se pueden considerar como la forma “Pythonica” de trabajar con atributos
+# y programación orientada a objetos en Python porque permiten acceder
+# al valor de los atributos de instancias como si fueran atributos públicos y usar la magia de los intermediarios (getters y setters)
+# para validar valores nuevos y para evitar acceder o modificar los valores directamente.
+# Además, al definir la propiedad con @property, el acceso a ese atributo se realiza a través de una función, siendo por lo tanto un
+# acceso controlado2. Esto puede ser importante con ciertas variables que no queremos que sean accesibles desde el exterior de una
+# manera no controlada.
+
+# # *************************************************************************************************************************************
+
+# M É T O D O S   M Á G I C O S :
+
+# Son metodos que se ejecutan sin ser llamados directamente, se ejecutan de manera indirecta. Todos comienzan con __ al inicia y al final.
+
+
+class Hediondos:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def __str__(self):
+        return f"Clase Hediondo: {self.nombre}"
+
+    def habla(self):
+        print(f"{self.nombre} tiene {
+            self.edad} año/s y dice que lo alimentes!!!")
+
+
+gatuna1 = Hediondos("Carmela", 1)
+gatuna2 = Hediondos("Lucinda", 1)
+perruno1 = Hediondos("Rex", 12)
+print(perruno1)
+
+# Los más importantes:
+
+# __main__ : Definido antes.
+# __str__ : da la información de la clase de la instancia.
+# Información: https://rszalski.github.io/magicmethods/
+
+# *************************************************************************************************************************************
+
+# D E S T R U C T O R :
+
+# Es un metodo mágico o especial que se llama cuando un obeto se destruye o se elimina. Se define como " __del__":
+
+
+# class MiClase:
+#    def __init__(self):
+#        print("Objeto creado")
+
+#    def __del__(self):
+#        print("Objeto destruido")
+
+
+# Obj_Ejem = MiClase()
+
+# *************************************************************************************************************************************
+
+# C O M P A R A N D O   O B J E T O S :
+
+
+class Coordenadas:
+    def __init__(self, lat, lon):
+        self.lat = lat
+        self.lon = lon
+
+    def __eq__(self, otro):
+        return self.lat == otro.lat and self.lon == otro.lon
+
+    def __ne__(self, otro):
+        return self.lat != otro.lat or self.lon != otro.lon
+
+
+coords1 = Coordenadas(45, 27)   # Instancia 1
+coords2 = Coordenadas(45, 27)   # Instancia 2
+
+# ¿Son las mismas instancias si tienen los mismos valores? NO.
+# Imprime False, puesto que el espacio en memoria RAM (física) es distinto.
+print(coords1 == coords2)
+# Con el signo "==", se está consultando si las Instancias son copia una de la otra.
+# Para que sean iguales, se debe implementar un método mágico o especial: "__eq__".
+# Aqui devuelve el valor de "True".
+print(coords1 == coords2)
+# En ese sentido, ambas instancias son iguales.
+
+# __ne__ : Not Equal.
+# Si se consulta por la desingualdad o no igualdad, imprime "False".
+print(coords1 != coords2)
