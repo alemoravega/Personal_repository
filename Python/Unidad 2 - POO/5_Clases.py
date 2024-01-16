@@ -184,7 +184,8 @@ class Gato1(Animal):
         return "Miau!"
 
 
-class AnimalFactory:
+# class AnimalFactory:
+
     def create_animal(self):
         tipo = input("¿Qué tipo de animal quieres crear? ")
         if tipo.lower() == "perro":
@@ -196,9 +197,9 @@ class AnimalFactory:
 
 
 # Uso del Factory Method
-factory = AnimalFactory()
-animal = factory.create_animal()
-print(animal.hablar())
+# factory = AnimalFactory()
+# animal = factory.create_animal()
+# print(animal.hablar())
 
 
 # ***************************************************************************************************************
@@ -210,17 +211,80 @@ print(animal.hablar())
 # otros métodos que pertenecen a la misma clase.
 
 class Wwe:
+    """ Se está definiendo una clase "Wwe" """
+
     def __init__(self, nombre, frase, finisher):
-        self.nombre = nombre  # Para que sea privada se le pone: "__".
-        self.frase = frase
-        self.finisher = finisher
+        # Método constructor de una clase, acepta 3 argumentos: nombre, frase, finisher.
+        self.__nombre = nombre      # Para que sea privada se le pone: "__".
+        self.frase = frase          # Propiedades públicas de la clase que se inicializan
+        self.finisher = finisher    # con los valores de los argumentos.
 
     def habla(self):
-        print(f"{self.nombre} dice: Yeaaaaah!")
+        """Método público de la clase que imprime una frase"""
+        print(f"{self.__nombre} dice: {self.frase}")
 
     @classmethod
     def factory(cls):
+        """Método de clase que crea y devuelve una nueva instacia"""
         return cls("The Rock", "If you smell what The Rock is cocking", "Rock Bottom")
-    
 
-# Cam,biar "nombre" a "__nombre", se usa 'Ctrl + Shift + p'
+    def get__nombre(self):
+        return self.__nombre
+
+
+personaje1 = Wwe.factory()
+personaje1.habla()
+# Cam,biar "nombre" a "__nombre", se usa 'Ctrl + Shift + p', luego "rename".
+
+# Con "__" no se puede aceder al valoor del argumento:
+# print(personaje1.__nombre)
+# imprime lo siguiente:
+# AttributeError: 'Wwe' object has no attribute '__nombre'.
+
+# Método que permite devolver el valor del atributo privado pero no cambiar:
+
+# def get__nombre(self):
+#    return self.__nombre
+# Ejemplo:
+
+print(personaje1.get__nombre())     # Se obtiene el valor de la variable.
+
+# Método set para cambiar un argumento.
+
+# Explicación de Bing: *****************************************************************************************
+
+# Los métodos privados en Python son funciones que solo pueden ser llamadas desde otros métodos que pertenecen
+# a la misma clase. Python no distingue entre métodos públicos y privados de forma nativa, pero como convención,
+# se prefija un guión bajo para indicar que un método debería ser interpretado como privado.
+
+
+class MiClase:
+    def __init__(self):
+        self._atributo_privado = 1
+
+    def _metodo_privado(self):
+        print("Hola mundo!")
+
+
+mi_objeto = MiClase()
+mi_objeto._metodo_privado()
+
+# En este código, _metodo_privado es un método privado. Aunque técnicamente puede ser accedido fuera de la clase
+# (como se muestra en el ejemplo), la convención es que solo debe ser utilizado dentro de la clase. Es importante
+# mencionar que los métodos “privados” generalmente no están documentados y no se adhieren a ningún programa de
+# retrocompatibilidad. Por esta razón, no es recomendable hacer uso de ellos fuera de la clase o módulo en el
+# que están definidos.
+
+# ***************************************************************************************************************
+
+# D E C O R A D O R    P R O P E R T Y :
+
+
+class DonPollo:
+    """ejemplo"""
+
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+
+pollo = DonPollo("Alejandro")
