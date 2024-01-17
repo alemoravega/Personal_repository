@@ -138,7 +138,7 @@ class Regalones:
         """Función de ejemplo"""
 # cls : convencion que se utiliza cuando se está creando métodos de clase para referirse a la clase misma.
 # En este caso, es lo mismo que se escribiera "Regaloones".
-        print("Ellos dicen: Miaaaushh!")
+        print("Ellas dicen: Miaaaushh!")
 
 
 Regalones.hablar()
@@ -227,7 +227,7 @@ class Wwe:
     @classmethod
     def factory(cls):
         """Método de clase que crea y devuelve una nueva instacia"""
-        return cls("The Rock", "If you smell what The Rock is cocking", "Rock Bottom")
+        return cls("The Rock", "If you smeeeeell what The Rock... is cocking.", "Rock Bottom")
 
     def get__nombre(self):
         return self.__nombre
@@ -397,8 +397,9 @@ print(coords1 == coords2)
 # Para que sean iguales, se debe implementar un método mágico o especial: "__eq__".
 # Aqui devuelve el valor de "True".
 print(coords1 == coords2)
-# En ese sentido, ambas instancias son iguales.
+# En ese sentido, ambas instancias son iguales, ubicadas en distintas memorias.
 
 # __ne__ : Not Equal.
 # Si se consulta por la desingualdad o no igualdad, imprime "False".
 print(coords1 != coords2)
+print(coords1, coords2)
