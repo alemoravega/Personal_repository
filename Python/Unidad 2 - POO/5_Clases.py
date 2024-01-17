@@ -186,7 +186,6 @@ class Gato1(Animal):
 
 # class AnimalFactory:
 
-
     def create_animal(self):
         tipo = input("¿Qué tipo de animal quieres crear? ")
         if tipo.lower() == "perro":
@@ -386,6 +385,12 @@ class Coordenadas:
     def __ne__(self, otro):
         return self.lat != otro.lat or self.lon != otro.lon
 
+    def __lt__(self, otro):
+        return self.lat + self.lon < otro.lat + otro.lon
+
+    def __le__(self, otro):
+        return self.lat + self.lon <= otro.lat + otro.lon
+
 
 coords1 = Coordenadas(45, 27)   # Instancia 1
 coords2 = Coordenadas(45, 27)   # Instancia 2
@@ -403,3 +408,74 @@ print(coords1 == coords2)
 # Si se consulta por la desingualdad o no igualdad, imprime "False".
 print(coords1 != coords2)
 print(coords1, coords2)
+
+#  __lt__ : "less than".
+
+print(coords1 < coords2)
+# imprime "False", puesto que son iguales.
+
+print(coords1 > coords2)
+# imprime "False", puesto que son iguales.
+
+# __le__ : "less or equal"
+# imprime "True", puesto que porque son iguales.
+print(coords1 <= coords2)
+# *************************************************************************************************************************************
+
+# C O N T E N E D O R E S :
+
+# Son estructuras de datos que organizan varios elementos. Pueden ser: listas, diccionarios, conjuntos, tuplas. Además, el módulo
+# "collections" de Python proporciona tipos de datos de contenedores especializados que proporcionan alternativas a los contenedores
+# integrados de uso general de Python, como dict, list, set, y tuple. Algunos de estos contenedores especializados incluyen namedtuple,
+# deque, ChainMap, Counter, OrderedDict, defaultdict, UserDict, UserList, y UserString.
+
+
+# Colocar objetos dentro de otros objetos. En el ejemplo, se ingresará la clase "Productos" en "Categoría":
+
+# La clase Producto tiene dos atributos: nombre y precio. Estos se inicializan en el método __init__, que es el constructor de la clase.
+# Además, la clase Producto tiene un método __str__ que devuelve una cadena de texto que representa al objeto de la clase Producto.
+
+class Producto:
+    """Clase a contener"""
+
+    def __init__(self, nombre, precio):
+        self.nombre = nombre
+        self.precio = precio
+
+    def __str__(self):
+        return f"Producto: {self.nombre} - Precio: {self.precio}"
+
+# La clase Categoria es un contenedor para objetos de la clase Producto. Tiene una lista de productos y un nombre.
+# Al igual que en la clase Producto, estos atributos se inicializan en el método __init__.
+
+# La clase Categoria también tiene dos métodos adicionales:
+# agregar: Este método toma un objeto producto como argumento y lo añade a la lista de productos.
+# imprimir: Este método imprime todos los productos en la lista de productos.
+
+
+class Categoria:
+    """Clase contenedora"""
+    productos = []
+
+    def __init__(self, nombre, productos):
+        self.nombre = nombre
+        self.productos = productos
+
+    def agregar(self, producto):
+        self.productos.append(producto)
+
+    def imprimir(self):
+        for producto in self.productos:
+            print(producto)
+
+# Instancias (productos):
+
+
+kayak = Producto("Kayak", 1000)
+bicicleta = Producto("Bicicleta", 750)
+surfboard = Producto("Surfboard", 1500)
+
+# Clase contenedora.
+
+deportes = Categoria("Deportes", [kayak, bicicleta])
+deportes.agregar(surfboard)
